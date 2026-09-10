@@ -20,13 +20,12 @@ with a few deliberate differences:
 
 ## Install
 
+Published on [Packagist](https://packagist.org/packages/pattonwebz/wp-cli-magic-login).
+
 ### Option A — as a global WP-CLI package (recommended)
 
-WP-CLI's package manager can install straight from a git URL, no Packagist
-listing required:
-
 ```bash
-wp package install https://github.com/pattonwebz/wp-cli-magic-login.git
+wp package install pattonwebz/wp-cli-magic-login
 ```
 
 That's it — `wp magic-login` is now available on every site this WP-CLI
@@ -49,21 +48,7 @@ wp package uninstall pattonwebz/wp-cli-magic-login
 ### Option B — per-project, via Composer
 
 ```bash
-composer require --dev pattonwebz/wp-cli-magic-login:dev-main
-```
-
-Since this isn't published on Packagist, point Composer at the GitHub repo
-in your project's `composer.json`:
-
-```json
-{
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/pattonwebz/wp-cli-magic-login"
-        }
-    ]
-}
+composer require --dev pattonwebz/wp-cli-magic-login
 ```
 
 Then tell WP-CLI to load it, either via `wp-cli.yml`:
