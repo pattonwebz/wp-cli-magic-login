@@ -1,0 +1,30 @@
+{
+    "name": "pattonwebz/wp-cli-magic-login",
+    "description": "Generate expiring, single-use magic login links for local WordPress testing via WP-CLI. Self-installs its own tiny must-use plugin — no separate plugin activation step.",
+    "type": "wp-cli-package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "William Patton"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "wp-cli/wp-cli": "^2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "WPCLIMagicLogin\\": "src/"
+        }
+    },
+    "extra": {
+        "commands": [
+            "magic-login create",
+            "magic-login invalidate"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
